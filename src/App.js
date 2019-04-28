@@ -17,7 +17,7 @@ function App() {
           rel="noopener noreferrer"
         >
           zmiana
-          <p>asdasdasdasd</p>
+          <p>asdasdasdasasdasdasdd</p>
         </a>
       </header>
     </div>
