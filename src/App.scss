@@ -1,0 +1,46 @@
+*,
+body,
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+.header{
+    background-color: #000; 
+    display: inline-block;
+    min-height: 11vh;
+    width: 100%;
+}
+
+.title{
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;    
+}
+
+.input-search{
+    font-size: 24px;
+    display: 'block';
+    width: 99%;
+    padding: 8px 0 8px 16px ;
+}
+
+.text-header{
+    margin-bottom: 10px;
+}
+
+.movie-button{
+    margin-top: 20px; 
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 3px;
+    background-color: green;
+    color: #fff;
+}
