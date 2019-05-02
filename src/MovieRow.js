@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+
 
 class MovieRow extends React.Component{
 
@@ -9,22 +11,18 @@ class MovieRow extends React.Component{
     }
 
     render(){
-        return <div>
-           <table key={this.props.movie.id}> 
-        <tbody>
-          <tr>
-            <td>
+        return (
+          <div className="container">
+            <div className="img-column" key={this.props.movie.id}>         
                 <img width="100" src={this.props.movie.poster_src} alt="Brak plakatu!"/>
-            </td>
-            <td>
+            </div>
+            <div className="overview-column">
               <h3 className='text-header'>{this.props.movie.title}</h3>
-              <p>{this.props.movie.overview ? this.props.movie.overview : "Sorry but we have not description for this movie :("}</p>
+              <p className="paragraphs">{this.props.movie.overview ? this.props.movie.overview : "Sorry but we have not description for this movie :("}</p>
               <button className='movie-button' onClick={this.viewMovie.bind(this)}>Podgląd</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>     
+            </div>            
     </div>
+        )
     }
 }
 

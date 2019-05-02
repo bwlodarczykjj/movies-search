@@ -69,6 +69,7 @@ const urlString = `http://api.themoviedb.org/3/search/movie?api_key=2b229017e9b9
       </div>      
         <input className="input-search" onChange={this.searchChangeHandler.bind(this)} placeholder="Wprowadź nazwę filmu" />
         {this.state.rows}
+        
       </div>
    );
   }
