@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and MovieDB API (https://developers.themoviedb.org/3git)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and MovieDB API (https://developers.themoviedb.org/3git). 
+
+Ps. I apologize for "dupa" commit, but you know, there is no development process without it :D 
 
 ## Available Scripts
 
