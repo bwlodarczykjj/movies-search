@@ -8,11 +8,8 @@ class App extends Component {
   
 constructor(props){
   super(props)
-  
   this.state = {}
-
-  this.performSearch('ant-man') //Metoda, która pozwala na wyszukiwanie po API
-
+  this.performSearch('Ant-Man') //Metoda, która pozwala na wyszukiwanie po API
 }
 
 performSearch(searchTerm) {
@@ -26,19 +23,23 @@ const urlString = `http://api.themoviedb.org/3/search/movie?api_key=2b229017e9b9
   //Pobieranie danych 
 
   success: (searchResults) => {
-  console.log("Fetched data success")
+  console.log("Fetching data success")
         
   const results = searchResults.results
   const movieRows = []
 
   results.forEach((movie) =>{
-  //poster_path to unikatyowy link do plakatow, pobieram go z API
+  //poster_path to unikatyowy link do plakatow, pobieram go z API i wyświetlam zamiennik, jesli w bazie nie ma plakatu
+  
+  movie.poster_src = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
+  
+  if(movie.poster_path === null){
+    movie.poster_src = "./img/nophoto.png"
+  }
 
-  movie.poster_src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`          
-          
   const movieRow = <MovieRow key={movie.id} movie={movie} />
   movieRows.push(movieRow)
-  
+ 
 })
 
   this.setState({
